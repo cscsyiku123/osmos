@@ -1,0 +1,2 @@
+[workspace]
+members=["osmos-wasm","osmos-core","osmos-sim"]

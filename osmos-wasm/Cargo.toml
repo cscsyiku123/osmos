@@ -2,7 +2,14 @@
 name = "osmos-wasm"
 version = "0.1.0"
 edition = "2021"
-
+[lib]
+crate-type = ["cdylib"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+wasm-bindgen = "0.2.84"
+osmos-sim = { path = "../osmos-sim" }
+osmos-core = { path = "../osmos-core" }
+serde = { version = "1.0.130", features = ["derive"] }
+serde-wasm-bindgen = "0.4.0"
+getrandom = {version = "0.2", features = ["js"] }
